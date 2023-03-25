@@ -9,17 +9,77 @@ a = 2, b = 10 -> нет a = 9, b = -3 -> да a = -3 b = 9 -> нет
 3 -> Среда
 5 -> Пятница
 
-*/ 
-Console.WriteLine("Введите две цифры"); 
+ 
+Console.WriteLine("Введите номер дня недели"); 
 
 int a = int.Parse(Console.ReadLine());
 
-int b = int.Parse(Console.ReadLine());
+if (a == 1){
+Console.WriteLine ("Это понедельник");    
+}
 
-if (a == b * b){
-    Console.WriteLine ("Первое число является квадратом второго");
-} 
+if (a == 2){
+Console.WriteLine ("Это вторник");    
+}
 
-else{
-    Console.WriteLine("Первое число не является квадратом второго");
+if (a == 3){
+Console.WriteLine ("Это среда");    
+}
+
+if (a == 4){
+Console.WriteLine ("Это четверг");    
+}
+
+if (a == 5){
+Console.WriteLine ("Это пятница");    
+}
+
+if (a == 6){
+Console.WriteLine ("Это суббота");    
+}
+
+if (a == 7){
+Console.WriteLine ("Это воскресенье");    
+}
+
+if (a > 7){
+    Console.WriteLine("Это не день недели");
+}
+
+if (a < 1){
+    Console.WriteLine("Это не день недели");
+}
+
+*/ 
+
+/*
+Задача No5. Напишите программу, которая на вход принимает одно число (N), а на выходе показывает все целые числа в промежутке от -N до N.
+4 -> "-4, -3, -2, -1, 0, 1, 2, 3, 4"
+2 -> " -2, -1, 0, 1, 2"
+
+Задача No7. Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает последнюю цифру этого числа.
+456 -> 6 782 -> 2 918 -> 8
+*/ 
+
+/*
+int N = int.Parse(Console.ReadLine()); 
+
+int a = -N; 
+
+while (a <= N){
+   Console.Write($"{a} "); 
+      a = a + 1; 
+}
+*/
+
+Console.WriteLine("Введите трехзначное число");
+
+int N = int.Parse(Console.ReadLine()); 
+
+if (N < 1000 & N > 99){
+    Console.WriteLine(N % 10);
+}
+
+else {
+    Console.WriteLine("Введите правильное число");
 }
